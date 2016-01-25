@@ -11,18 +11,18 @@ RSpec.feature 'User', type: :feature do
 
     click_on "Login"
 
-    expect(current_path).to eq user_path
+    expect(current_path).to eq root_path
 
-    expect(page).to have_content     'Welcome User!'
-    expect(page).to have_content     'Logout'
-    expect(page).not_to have_content 'Login'
+    expect(page).to have_content 'Welcome User!'
+    expect(page).to have_button('Logout')
+    expect(page).not_to have_button('Login')
 
     click_on "Logout"
 
-    expect(page).to eq root_path
+    expect(current_path).to eq root_path
     expect(page).to have_content 'Goodbye!'
-    expect(page).to have_content 'Login'
-    expect(page).not_to have_content 'Logout'
+    expect(page).to have_button('Login')
+    expect(page).not_to have_button('Logout')
   end
 
 end

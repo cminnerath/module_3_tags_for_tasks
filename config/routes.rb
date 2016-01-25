@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   # get 'users' => 'users#index'
   resources :users
   resources :tasks
+  root "main#index"
+  get "login" => "session#create"
+  post "login" => "sessions#create"
+  post "logout" => "sessions#destroy"
 end

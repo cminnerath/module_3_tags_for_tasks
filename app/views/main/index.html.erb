@@ -1,0 +1,14 @@
+<%= notice %>
+<% if current_user %>
+<%= form_for(:session, url: logout_path) do |f| %>
+<% f.submit 'Logout' %>
+<% end %>
+<% else %>
+<%= form_for(:session, url: login_path) do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<%= f.label :password%>
+<%= f.password_field :password %>
+<%= f.submit 'Login' %>
+<% end %>
+<% end %>

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'a vistor can create a task', :type => :feature do
+RSpec.describe 'a vistor', :type => :feature do
 
   it 'creates a task' do
     visit new_task_path

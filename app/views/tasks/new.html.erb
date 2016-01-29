@@ -1,13 +1,17 @@
 <h2>New Task</h2>
 <%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <ul><%= f.label :title %>
+  <%= f.text_field :title %></ul>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <ul><%= f.label :description %>
+  <%= f.text_field :description %></ul>
 
-  <%= f.label :due_date %>
-  <%= f.date_field :due_date %>
+  <ul><%= f.label :due_date %>
+  <%= f.date_field :due_date %></ul>
 
-  <%= f.submit %>
+  <ul><%= f.label :tags %>
+  <%= f.text_area :tag_parse %></ul>
+
+  <ul><%= f.submit %></ul>
+
 <% end %>

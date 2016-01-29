@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'launchy'
   gem 'pry'
 end
 

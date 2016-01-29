@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= @task.title %>
-<%= @task.description %>
-<%= @task.due_date %>
+<ul><%= @task.title %></ul>
+<ul><%= @task.description %></ul>
+<ul><%= @task.due_date %></ul>
+<% @task.tags.each do |ts| %>
+  <li><%= link_to ts.tag, tag_path(ts) %></li>
+<% end %>

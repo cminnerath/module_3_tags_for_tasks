@@ -1,8 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe 'a vistor', :type => :feature do
+RSpec.describe 'a user', :type => :feature do
+  let!(:user) { User.create(username: "User", password: "password", email: "e@e.com") }
 
   it 'creates a task' do
+    login
+
     visit new_task_path
 
     fill_in 'Title',        with: 'Do some laundry'
